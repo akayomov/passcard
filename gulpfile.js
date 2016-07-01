@@ -34,7 +34,11 @@ gulp.task('less',function(){
 });
 
 gulp.task('other',function(){
-	gulp.src(path.join(__dirname,'source/**/*.*'))
+	gulp.src([path.join(__dirname,'source/**/*.*'),
+		"!"+path.join(__dirname,'source/**/*.coffee'),
+		"!"+path.join(__dirname,'source/**/*.jade'),
+		"!"+path.join(__dirname,'source/**/*.less')
+	])
 	.pipe(plumber())
 	.pipe(gulp.dest('build'))
 });
