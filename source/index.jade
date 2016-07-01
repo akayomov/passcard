@@ -1,0 +1,62 @@
+html
+	head
+		meta(name='viewport',content="width=device-width, initial-scale=1")
+		link(rel="stylesheet",href="style.css")
+		script(type="text/javascript",src="code.js")
+	body
+		header PassCard Generator
+		div.head
+			div.description
+				span Welcome to PassCard Generator
+				span It helps in creation cards for storing passwords in hidden manner.
+				span The card is already generated. You can use it or generate one with your own KEY.
+				span After you generated the card - print it, cut the parts and glue them together
+				span Once you'll need new password you can use the card by selecting side, starting char and your path.
+				span Then if you forget the password, card will help you to remind it
+			div.form
+				input(type="text",placeholder="key",id='seed',value="key",maxlength=8)
+				button#generate Generate
+		div.card#helper
+			div.description
+				span This is your card helper.
+				span Store it in safe place (ex. at home). 
+				span If you lost your PassCard it helps you to generate it again.
+			div.active
+				span Your key code is:
+				span#code 12345678
+			div.site#place example.com
+		div.card#frontface
+			div.line 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+			div.line 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+			div.line 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+			div.middle
+				div.prelines
+					div.line 0 0 0 0
+					div.line 0 0 0 0
+				div.label
+					div#label PassCard
+				div.postlines
+					div.line 0 0 0 0
+					div.line 0 0 0 0
+			div.line 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+			div.line 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+			div.line 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		div.card#backface
+			div.line 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+			div.line 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+			div.line 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+			div.middle
+				div.prelines
+					div.line 0 0 0 0
+					div.line 0 0 0 0
+				div.label
+					div#key 12345678
+					div#site exapmle.com
+				div.postlines
+					div.line 0 0 0 0
+					div.line 0 0 0 0
+			div.line 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+			div.line 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+			div.line 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+		footer made by Alex Akayomov
