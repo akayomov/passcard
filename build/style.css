@@ -1,0 +1,135 @@
+@font-face {
+  font-family: 'card';
+  src: url('unispacebd.ttf');
+}
+@font-face {
+  font-family: 'text';
+  src: url('ABeeZee-Regular.ttf');
+}
+html,
+body {
+  -webkit-print-color-adjust: exact;
+  margin: 0;
+  font-family: 'text';
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 720px;
+}
+header,
+footer {
+  width: 100%;
+  background-color: black;
+  text-align: center;
+}
+header {
+  color: white;
+  font-size: xx-large;
+  top: 0;
+}
+footer {
+  color: lightgray;
+  bottom: 0;
+}
+div.card {
+  font-family: 'card';
+  border: 1px #000 dotted;
+  width: 85.5mm;
+  height: 54mm;
+  border-radius: 3.2mm;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+div.card div.line {
+  font-size: medium;
+  margin: 0.8mm 0mm;
+}
+div.card div.middle {
+  display: flex;
+}
+div.card div.label {
+  width: 39mm;
+  margin: 0mm 2mm;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.6mm;
+  background-color: #000;
+}
+div.card div.label div {
+  color: #fff;
+}
+div.card div.label div#label {
+  font-size: x-large;
+}
+div.card div.label div#key {
+  font-size: large;
+}
+div.card div.label div#site {
+  font-size: x-small;
+}
+div.card#helper {
+  display: none;
+  font-family: 'text';
+}
+div.card#helper div.description {
+  text-align: center;
+  margin: 5mm;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div.card#helper div.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5mm;
+}
+div.card#helper div.active span#code {
+  font-family: 'card';
+  font-size: x-large;
+  border: 1px solid;
+  padding: 1mm 2mm;
+}
+div.card#helper div.site {
+  font-family: 'card';
+  font-size: small;
+  margin-bottom: 5mm;
+}
+div.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div.head div.description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px;
+}
+div.head div.form {
+  margin: 10px;
+}
+div.head div.form input {
+  text-align: center;
+  font-family: 'text';
+}
+div.head div.form button {
+  font-family: 'text';
+}
+@media print {
+  header,
+  footer,
+  div.head {
+    display: none;
+  }
+  div.card#helper {
+    display: flex;
+  }
+}
